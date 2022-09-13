@@ -6,10 +6,10 @@ const Dropdown = () => {
 
   return (
     <div className="form-wrapper">
-      <h2>Choose a section category below to see current NYT articles related to that section.</h2>
+      <p className="dropdown-label">Choose a section category to see current, related NYT articles!</p>
       <form>
         <select name="selectSection" id="selectSection">
-          <option value="default" disabled>Select a Section Category</option>
+          <option value="default" disabled selected>Select a Section Category</option>
           <option value="arts">Arts</option>
           <option value="automobiles">Automobiles</option>
           <option value="books">Books</option>
