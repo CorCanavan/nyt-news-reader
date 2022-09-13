@@ -11,7 +11,7 @@ const Articles = ({ sectionArticles }) => {
       <Card 
         title={article.title}
         byline={article.byline}
-        id={Date.now()}
+        id={article.created_date}
         key={index}
         image={thumbnailImage.url}
       />

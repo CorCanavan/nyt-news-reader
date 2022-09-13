@@ -26,13 +26,16 @@ const App = () => {
 
           }}
         />
-        {/* <Route 
+        <Route 
           exact path="/article/:id"
           render={({ match }) => {
-            const articleToRender = articles.find(article => article.id === parseInt(match.params.id))
+            const articleToRender = sectionArticles.find(article => article.created_date === match.params.id)
+            console.log("match.params", match.params)
+            console.log("article", articleToRender
+            )
             return <ArticleDetails {...articleToRender} />
           }}
-        /> */}
+        />
     </main>
   )
 }
