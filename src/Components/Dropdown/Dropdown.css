@@ -1,0 +1,9 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-label {
+  margin-right: .5em;
+}
