@@ -1,4 +1,6 @@
 import './App.css';
+import Articles from '../Articles/Articles';
+import ArticleDetails from '../ArticleDetails/ArticleDetails';
 
 const App = () => {
 
