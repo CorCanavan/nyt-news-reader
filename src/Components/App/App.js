@@ -4,8 +4,12 @@ import './App.css';
 import Articles from '../Articles/Articles';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import Dropdown from '../Dropdown/Dropdown';
+import mockData from '../../mockData';
 
 const App = () => {
+
+  const [sectionArticles, setSectionArticles] = useState(mockData)
+  const [sectionKeyword, setSectionKeyword] = useState('')
 
   return (
     <main className="main-container">
@@ -17,7 +21,7 @@ const App = () => {
           render={() => {
             return <div>
               <Dropdown />
-              <Articles />
+              <Articles sectionArticles={sectionArticles} />
             </div>
 
           }}

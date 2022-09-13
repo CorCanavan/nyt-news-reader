@@ -6,6 +6,10 @@ header {
   height: 5rem;
 }
 
+.main-container {
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
