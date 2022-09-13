@@ -8,8 +8,39 @@ import mockData from '../../mockData';
 
 const App = () => {
 
-  const [sectionArticles, setSectionArticles] = useState(mockData)
-  const [sectionKeyword, setSectionKeyword] = useState('')
+  const [sectionArticles, setSectionArticles] = useState([])
+  const [sectionKeyword, setSectionKeyword] = useState('home')
+
+  // const getHomeArticles = () => {
+  //   fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     console.log("data", data)
+  //     setSectionArticles(data.results)
+  //   })
+  // }
+
+  // useEffect(() => {
+  //   getHomeArticles()
+  // }, [])
+
+  const getSectionArticles = (section) => {
+    fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d`)
+    .then(response => response.json())
+    .then(data => {
+      console.log("data", data)
+      setSectionArticles(data.results)
+    })
+  }
+
+  useEffect(() => {
+    getSectionArticles(sectionKeyword)
+  }, [sectionKeyword])
+
+  const handleSectionSelection = (section) => {
+    setSectionKeyword(section)
+    // getSectionArticles(section)
+  }
 
   return (
     <main className="main-container">
@@ -20,7 +51,7 @@ const App = () => {
           exact path="/"
           render={() => {
             return <div>
-              <Dropdown />
+              <Dropdown handleSectionSelection={handleSectionSelection} sectionKeyword={sectionKeyword} />
               <Articles sectionArticles={sectionArticles} />
             </div>
 

@@ -1,6 +1,6 @@
 import './Dropdown.css';
 
-const Dropdown = () => {
+const Dropdown = ({ sectionKeyword, handleSectionSelection }) => {
 
   // arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
 
@@ -8,8 +8,8 @@ const Dropdown = () => {
     <div className="form-wrapper">
       <p className="dropdown-label">Choose a section category to see current, related NYT articles!</p>
       <form>
-        <select name="selectSection" id="selectSection">
-          <option value="default" disabled selected>Select a Section Category</option>
+        <select name="selectSection" id="selectSection" onChange={(e) => handleSectionSelection(e.target.value)} value={sectionKeyword}>
+          <option value="default" disabled>Select a Section Category</option>
           <option value="arts">Arts</option>
           <option value="automobiles">Automobiles</option>
           <option value="books">Books</option>

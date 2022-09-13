@@ -2,7 +2,7 @@ import './ArticleDetails.css';
 
 const ArticleDetails = ({title, byline, abstract, url, multimedia}) => {
 
-  const lgImage = multimedia.find(image => image.format === "threeByTwoSmallAt2X")
+  let lgImage = multimedia ? multimedia.find(image => image.format === "threeByTwoSmallAt2X").url : null
 
   return (
     <div className="details-container">
@@ -10,7 +10,7 @@ const ArticleDetails = ({title, byline, abstract, url, multimedia}) => {
       <p>{byline}</p>
       <p>{abstract}</p>
       <a href={url}><p>Read the full article here.</p></a>
-      <img src={lgImage.url} />
+      <img src={lgImage} />
     </div>
 
   )
