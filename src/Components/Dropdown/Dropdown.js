@@ -9,7 +9,7 @@ const Dropdown = ({ sectionKeyword, handleSectionSelection }) => {
       <p className="dropdown-label">Choose a section category to see current, related NYT articles!</p>
       <form>
         <select name="selectSection" id="selectSection" onChange={(e) => handleSectionSelection(e.target.value)} value={sectionKeyword}>
-          <option value="default" disabled selected>Select a Section Category</option>
+          <option value="default" disabled>Select a Section Category</option>
           <option value="arts">Arts</option>
           <option value="automobiles">Automobiles</option>
           <option value="books">Books</option>

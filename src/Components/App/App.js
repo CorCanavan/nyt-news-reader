@@ -9,7 +9,7 @@ import mockData from '../../mockData';
 const App = () => {
 
   const [sectionArticles, setSectionArticles] = useState([])
-  const [sectionKeyword, setSectionKeyword] = useState('')
+  const [sectionKeyword, setSectionKeyword] = useState('home')
 
   // const getHomeArticles = () => {
   //   fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d')
@@ -33,9 +33,13 @@ const App = () => {
     })
   }
 
+  useEffect(() => {
+    getSectionArticles(sectionKeyword)
+  }, [sectionKeyword])
+
   const handleSectionSelection = (section) => {
     setSectionKeyword(section)
-    getSectionArticles(section)
+    // getSectionArticles(section)
   }
 
   return (

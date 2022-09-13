@@ -8,7 +8,7 @@ const Card = ({ title, byline, id, image}) => {
       <div className="card">
         <h2 className="article-title">{title}</h2>
         <p className="byline">{byline}</p>
-        <img className="thumbnail-img" src={image} alt={title} />
+       { image ? <img className="thumbnail-img" src={image} alt={title} /> : null }
       </div>
     </Link>
   )
