@@ -10,7 +10,7 @@ const App = () => {
 
   const [sectionArticles, setSectionArticles] = useState([])
   const [sectionKeyword, setSectionKeyword] = useState('home')
-
+  const [errorMessage, setErrorMessage] = useState('')
   // const getSectionArticles = (section) => {
   //   fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d`)
   //   .then(response => response.json())
@@ -26,6 +26,7 @@ const App = () => {
       console.log(articleData, "articleData")
       setSectionArticles(articleData)
     })
+    .catch(error => setErrorMessage(`Oops! We're sorry, something went wrong. ${error.message}`))
   }, [sectionKeyword])
 
   const handleSectionSelection = (section) => {
@@ -38,6 +39,7 @@ const App = () => {
       <header>
         <h1>New York Times News Reader</h1>
       </header>
+        {errorMessage && <p>{errorMessage}</p>}
         <Route 
           exact path="/"
           render={() => {
