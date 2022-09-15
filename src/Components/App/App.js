@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
 import Articles from '../Articles/Articles';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
@@ -11,13 +11,6 @@ const App = () => {
   const [sectionArticles, setSectionArticles] = useState([])
   const [sectionKeyword, setSectionKeyword] = useState('home')
   const [errorMessage, setErrorMessage] = useState('')
-  // const getSectionArticles = (section) => {
-  //   fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d`)
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     setSectionArticles(data.results)
-  //   })
-  // }
 
   useEffect(() => {
     getSectionArticles(sectionKeyword)
@@ -37,7 +30,9 @@ const App = () => {
   return (
     <main className="main-container">
       <header>
-        <h1>New York Times News Reader</h1>
+        <Link to="/">
+          <h1>New York Times News Reader</h1>
+        </Link>
       </header>
         {errorMessage && <p>{errorMessage}</p>}
         <Route 
