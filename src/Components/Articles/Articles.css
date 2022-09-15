@@ -1,5 +1,7 @@
 .articles-container {
-  border: 2px solid green;
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
   grid-template-rows: auto;
+  grid-gap: 1.5em;
+  padding: 1em;
 }
