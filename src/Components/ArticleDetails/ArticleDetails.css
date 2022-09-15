@@ -3,26 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid aqua;
   height: 85vh;
-  /* width: auto; */
 }
 
 .article-info {
   text-align: center;
   display: flex;
   flex-direction: column; 
-  align-items: center; 
-  /* justify-content: space-evenly; */
-  border: 2px solid pink;
-  /* height: 30vh; */
+  width: 85%;
 }
 
 .details-img {
   border-radius: 5px;
-  /* height: 50%; */
-  height: 50vh;
-  width: 42%;
+  width: 100%;
 }
 
 .back-btn {
@@ -36,7 +29,7 @@
   transform: scale(1.1);
 }
 
-.details-byline {
+.details-byline, .article-link {
   font-size: 1.1em;
 }
 
