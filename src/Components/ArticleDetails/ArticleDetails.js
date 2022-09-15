@@ -20,7 +20,6 @@ const ArticleDetails = ({title, byline, abstract, url, multimedia}) => {
         <button className="back-btn">BACK</button>
       </Link>
     </div>
-
   )
 }
 

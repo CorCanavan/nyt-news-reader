@@ -38,6 +38,6 @@
   font-style: italic;
 }
 
-.details-title, .details-byline, .details-abstract {
+.details-title, .details-byline, .details-abstract, .article-link {
   margin-bottom: .5em;
 }
