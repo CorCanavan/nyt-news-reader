@@ -1,5 +1,5 @@
 header {
-  background-color: #50b2c0;
+  background-color: rgb(32, 30, 31, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,5 +16,5 @@ a {
 }
 
 h1 {
-  color: #282c34;
+  color: #FAAA8D;
 }

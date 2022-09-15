@@ -8,19 +8,18 @@ const ArticleDetails = ({title, byline, abstract, url, multimedia}) => {
   return (
     <div className="details-container">
       <section className="article-info">
-        <p>{title}</p>
-        <p>{byline}</p>
-        <p>{abstract}</p>
-        <a href={url}><p>Read the full article here.</p></a>
+        <h2 className="details-title">{title}</h2>
+        <p className="details-byline">{byline}</p>
+        <p className="details-abstract">{abstract}</p>
+        <a href={url}><p className="article-link">Read the full article here.</p></a>
       </section>
-      <section className="article-image">
-        <img src={lgImage} alt={title} />
+      <section className="img-container">
+        <img className="details-img" src={lgImage} alt={title} />
       </section>
       <Link to="/">
         <button className="back-btn">BACK</button>
       </Link>
     </div>
-
   )
 }
 

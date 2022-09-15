@@ -3,10 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 85vh;
 }
 
 .article-info {
   text-align: center;
+  display: flex;
+  flex-direction: column; 
+  width: 85%;
+}
+
+.details-img {
+  border-radius: 5px;
+  width: 100%;
 }
 
 .back-btn {
@@ -18,4 +27,17 @@
 .back-btn:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.details-byline, .article-link {
+  font-size: 1.1em;
+}
+
+.details-abstract {
+  font-size: 1.15em;
+  font-style: italic;
+}
+
+.details-title, .details-byline, .details-abstract, .article-link {
+  margin-bottom: .5em;
 }
