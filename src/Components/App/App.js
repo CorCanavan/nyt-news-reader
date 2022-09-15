@@ -4,37 +4,28 @@ import './App.css';
 import Articles from '../Articles/Articles';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import Dropdown from '../Dropdown/Dropdown';
-import mockData from '../../mockData';
+import { getSectionArticles } from '../../apiCalls';
 
 const App = () => {
 
   const [sectionArticles, setSectionArticles] = useState([])
   const [sectionKeyword, setSectionKeyword] = useState('home')
 
-  // const getHomeArticles = () => {
-  //   fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d')
+  // const getSectionArticles = (section) => {
+  //   fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d`)
   //   .then(response => response.json())
   //   .then(data => {
-  //     console.log("data", data)
   //     setSectionArticles(data.results)
   //   })
   // }
 
-  // useEffect(() => {
-  //   getHomeArticles()
-  // }, [])
-
-  const getSectionArticles = (section) => {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=g4TGZ3U9xgkWWNQIkvS184rsdQ0A0G8d`)
-    .then(response => response.json())
-    .then(data => {
-      console.log("data", data)
-      setSectionArticles(data.results)
-    })
-  }
-
   useEffect(() => {
     getSectionArticles(sectionKeyword)
+    .then(data => {
+      const articleData = data.results.filter(result => result.item_type === "Article")
+      console.log(articleData, "articleData")
+      setSectionArticles(articleData)
+    })
   }, [sectionKeyword])
 
   const handleSectionSelection = (section) => {
