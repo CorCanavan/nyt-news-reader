@@ -3,10 +3,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 2px solid aqua;
+  height: 85vh;
+  /* width: auto; */
 }
 
 .article-info {
   text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  /* justify-content: space-evenly; */
+  border: 2px solid pink;
+  /* height: 30vh; */
+}
+
+.details-img {
+  border-radius: 5px;
+  /* height: 50%; */
+  height: 50vh;
+  width: 42%;
 }
 
 .back-btn {
@@ -18,4 +34,17 @@
 .back-btn:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.details-byline {
+  font-size: 1.1em;
+}
+
+.details-abstract {
+  font-size: 1.15em;
+  font-style: italic;
+}
+
+.details-title, .details-byline, .details-abstract {
+  margin-bottom: .5em;
 }
