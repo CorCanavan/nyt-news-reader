@@ -24,7 +24,6 @@ const App = () => {
 
   const handleSectionSelection = (section) => {
     setSectionKeyword(section)
-    // getSectionArticles(section)
   }
 
   return (
@@ -38,7 +37,7 @@ const App = () => {
         <Route 
           exact path="/"
           render={() => {
-            return <div className="wrapper">
+            return <div>
               <Dropdown handleSectionSelection={handleSectionSelection} sectionKeyword={sectionKeyword} />
               <Articles sectionArticles={sectionArticles} />
             </div>

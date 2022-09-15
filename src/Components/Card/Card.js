@@ -6,9 +6,7 @@ const Card = ({ title, byline, id, image}) => {
   return (
     <Link to={`/article/${id}`}>
       <div className="card">
-        <section className="card-img">
           { image ? <img className="thumbnail-img" src={image} alt={title} /> : null }
-        </section>
         <section className="card-text">
           <h2 className="article-title">{title}</h2>
           <p className="byline">{byline}</p>
