@@ -2,8 +2,6 @@ import './Dropdown.css';
 
 const Dropdown = ({ sectionKeyword, handleSectionSelection }) => {
 
-  // arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
-
   return (
     <div className="form-wrapper">
       <p className="dropdown-label">Choose a section category to see current, related NYT articles!</p>

@@ -16,7 +16,6 @@ const App = () => {
     getSectionArticles(sectionKeyword)
     .then(data => {
       const articleData = data.results.filter(result => result.item_type === "Article")
-      console.log(articleData, "articleData")
       setSectionArticles(articleData)
     })
     .catch(error => setErrorMessage(`Oops! We're sorry, something went wrong. ${error.message}`))
@@ -41,16 +40,12 @@ const App = () => {
               <Dropdown handleSectionSelection={handleSectionSelection} sectionKeyword={sectionKeyword} />
               <Articles sectionArticles={sectionArticles} />
             </div>
-
           }}
         />
         <Route 
           exact path="/article/:id"
           render={({ match }) => {
             const articleToRender = sectionArticles.find(article => article.created_date === match.params.id)
-            console.log("match.params", match.params)
-            console.log("article", articleToRender
-            )
             return <ArticleDetails {...articleToRender} />
           }}
         />
