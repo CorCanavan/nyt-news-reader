@@ -50,7 +50,7 @@ const App = () => {
         <Route 
           exact path="/"
           render={() => {
-            return <div>
+            return <div className="wrapper">
               <Dropdown handleSectionSelection={handleSectionSelection} sectionKeyword={sectionKeyword} />
               <Articles sectionArticles={sectionArticles} />
             </div>

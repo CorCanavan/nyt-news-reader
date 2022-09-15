@@ -1,3 +1,14 @@
 .card {
   border: 2px solid purple;
+  box-sizing: border-box;
+  font-size: smaller;
+  /* display: flex; */
 }
+/* 
+.article-title {
+  font-size: medium;
+}
+
+.byline {
+  font-size: .8em;
+} */
