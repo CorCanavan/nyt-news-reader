@@ -3,6 +3,8 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Technologies](#technologies)
+- [Illustration](#illustration)
+- [Accessibility](#accessibility)
 - [Set Up](#set-up)
 - [User Stories](#user-stories)
 - [Project Planning](#project-planning)
@@ -23,6 +25,12 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
   - JSX/HTML
   - CSS
 
+## Illustration
+https://user-images.githubusercontent.com/97919748/190708702-67d1db74-ee8e-4b94-9579-caeefb68e1a0.mov
+
+## Accessibility
+![Screen Shot 2022-09-16 at 12 29 01 PM](https://user-images.githubusercontent.com/97919748/190707799-688b18a1-0726-477c-9114-46d1720714b3.png)
+
 ## Set Up
 1. Clone this [repository](https://github.com/CorCanavan/nyt-news-reader).
 2. `cd` into the directory.
@@ -37,8 +45,6 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 
 ## Project Planning
 - [Project Board](https://github.com/users/CorCanavan/projects/2/views/1)
-- [Wireframe](https://www.figma.com/file/RjxrXbaa1vKQaibLb99tZG/NYT-News-Reader?node-id=0%3A1)
-- [Color Palette](https://coolors.co/201e1f-ff4000-faaa8d-feefdd-50b2c0)
 
 ## Contributor
 **Corinne Canavan**
